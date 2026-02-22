@@ -19,11 +19,14 @@ function NavLinks({
   t,
   onLinkClick,
   className = '',
+  activeTextClass,
 }: {
   location: ReturnType<typeof useLocation>;
   t: (key: string) => string;
   onLinkClick?: () => void;
   className?: string;
+  /** e.g. "text-black" for mobile active link */
+  activeTextClass?: string;
 }) {
   return (
     <>
@@ -34,7 +37,7 @@ function NavLinks({
           onClick={onLinkClick}
           className={`whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium transition ${
             location.pathname === to
-              ? 'bg-primary text-white'
+              ? `bg-primary ${activeTextClass ?? 'text-white'}`
               : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900'
           } ${className}`}
         >
@@ -170,6 +173,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               location={location}
               t={t}
               onLinkClick={() => setMenuOpen(false)}
+              activeTextClass="text-black"
               className="block rounded-xl px-4 py-3 text-base font-medium bg-white text-black"
             />
             <div className="mt-4 pt-4  rounded-xl p-4 shadow-sm border ">
