@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html>
   <head>
+    <script>
+      (function() {
+        var lng = localStorage.getItem('i18nextLng') || '';
+        var isRtl = lng === 'ar' || lng.indexOf('ar-') === 0;
+        document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+        document.documentElement.setAttribute('lang', lng || 'ar');
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 

@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: 'Cairo', sans-serif;
-  direction: rtl;
+  direction: inherit; /* follows html[dir] set by i18n: ltr for EN, rtl for AR */
   @apply text-neutral-800 bg-neutral-50 antialiased;
 }
 

@@ -1,16 +1,19 @@
-import { qualityPolicyPoints } from '../config/content';
+import { useTranslation } from 'react-i18next';
 
 export function Quality() {
+  const { t } = useTranslation();
+  const points = t('content.qualityPolicyPoints', { returnObjects: true }) as string[];
+
   return (
     <div className="py-12 md:py-16">
       <div className="container-narrow">
-        <h1 className="section-title mb-2">سياسة الجودة والأمان</h1>
+        <h1 className="section-title mb-2">{t('qualityPage.title')}</h1>
         <p className="text-neutral-600 mb-10">
-          التزامنا بمعايير الجودة والأمان في جميع منتجاتنا وخدماتنا.
+          {t('qualityPage.intro')}
         </p>
 
         <ul className="space-y-4">
-          {qualityPolicyPoints.map((point, i) => (
+          {points.map((point, i) => (
             <li key={i} className="flex gap-3 items-start">
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-white text-sm font-bold">
                 {i + 1}

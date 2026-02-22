@@ -1,0 +1,178 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "locations": "Branches & Service Centers",
+    "partners": "Partners",
+    "quality": "Quality & Safety",
+    "contact": "Contact Us"
+  },
+  "site": {
+    "companyName": "Al-Mashreq AL-mutahida General Trading Company LLC",
+    "companyNameShort": "Al-Mashreq AL-mutahida",
+    "tagline": "Oils • Filters • Batteries • Service Centers",
+    "founded": "Est. {{year}}"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "copyright": "© {{year}} {{company}}. All rights reserved."
+  },
+  "buttons": {
+    "callNow": "Call Now",
+    "whatsapp": "WhatsApp",
+    "call": "Call",
+    "contactForm": "Contact Form",
+    "readMore": "Read More ←",
+    "requestQuote": "Request Quote / Contact",
+    "viewAllServices": "View All Services",
+    "qualityPolicy": "Quality & Safety Policy ←",
+    "viewAll": "View All",
+    "viewPartners": "View Partners",
+    "directions": "Directions",
+    "send": "Send"
+  },
+  "home": {
+    "aboutTitle": "About Us",
+    "servicesTitle": "Our Services",
+    "qualityTitle": "Quality & Safety",
+    "qualityIntro": "We are committed to quality and safety standards in all our products and services, and we work with internationally certified suppliers and agencies.",
+    "visionTitle": "Our Vision",
+    "missionTitle": "Our Mission",
+    "locationsTitle": "Branches & Service Centers",
+    "partnersTitle": "Partners",
+    "partnersTagline": "Authorized distributors and agents for global brands",
+    "ctaTitle": "Contact Us",
+    "ctaIntro": "For inquiries or a quote, call us or message us on WhatsApp."
+  },
+  "content": {
+    "aboutText": "Al-Mashreq United General Trading Company LLC was established in 1992, with over three decades of experience in distributing oils, filters, batteries, and service center operations. We are committed to quality and safety standards and work with international agencies and brands. We offer wholesale and retail solutions and service centers in multiple locations.",
+    "vision": "To be the first choice for customers in oils, filters, batteries, and maintenance services in Iraq and the region.",
+    "mission": "To provide high-quality products and services with safety and trust, and to build long-term partnerships with customers and partners.",
+    "timeline": {
+      "1992": "Company founding",
+      "2000": "Expansion in distribution and agencies",
+      "2010": "Opening multiple service centers",
+      "current": "Continued growth and partnerships"
+    },
+    "qualityPolicyPoints": [
+      "Commitment to quality and safety standards in all products and services.",
+      "Selecting internationally certified suppliers and agencies.",
+      "Continuous training and process improvement.",
+      "Listening to customer feedback and continuous improvement."
+    ],
+    "servicesIntro": "We offer wholesale and retail distribution, service centers, and industrial and environmental solutions.",
+    "servicesList": {
+      "oils": {
+        "title": "Oils",
+        "description": "Distribution of engine and industrial oils, wholesale and retail, from certified global brands.",
+        "category": "Distribution"
+      },
+      "filters": {
+        "title": "Filters",
+        "description": "High-quality oil, air, and fuel filters for all types of vehicles and machinery.",
+        "category": "Distribution"
+      },
+      "batteries": {
+        "title": "Batteries",
+        "description": "Car and vehicle batteries from certified agencies with warranty and quality.",
+        "category": "Distribution"
+      },
+      "maintenance": {
+        "title": "Service Centers",
+        "description": "Oil and filter changes, batteries, and general maintenance at our equipped centers.",
+        "category": "Services"
+      },
+      "recycling": {
+        "title": "Environmental Solutions",
+        "description": "Plant for purifying and filtering used oils as part of our environmental commitment.",
+        "category": "Industrial"
+      }
+    },
+    "locationsIntro": "Addresses of headquarters, branches, and service centers — call or use directions.",
+    "locations": {
+      "basra": {
+        "name": "Al-Mashreq United — Basra Branch",
+        "type": "Headquarters",
+        "address": "Basra"
+      },
+      "zubayr": {
+        "name": "Al-Mashreq United — Zubayr Branch",
+        "type": "Branch",
+        "address": "Industrial Area, Zubayr, Basra"
+      }
+    },
+    "partnersIntro": "We work with global brands as authorized distributors and agents (exclusive/certified/southern Iraq depending on agency).",
+    "partnersTagline": "Authorized distributors and agents for global brands",
+    "partners": {
+      "IGOL": { "description": "Exclusive agent in Iraq" },
+      "Mobil": { "description": "Distributor" },
+      "ACDelco": { "description": "Distributor" },
+      "Rudson": { "description": "Exclusive agent in Iraq" },
+      "Gat": { "description": "Distributor" },
+      "Triax": { "description": "Distributor" },
+      "almashreq factory": { "description": "Al-Mashreq United General Trading Company LLC Factory" }
+    },
+    "partnerTags": {
+      "زيوت": "Oils",
+      "فلاتر": "Filters",
+      "بطاريات": "Batteries",
+      "اضافات كيميائية ": "Chemical additives"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "timelineTitle": "Timeline"
+  },
+  "services": {
+    "title": "Services"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "For inquiries or a quote, use the form or direct contact methods.",
+    "contactInfo": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "formTitle": "Contact Form",
+    "successMessage": "Your message has been sent. We will get back to you soon.",
+    "name": "Name",
+    "message": "Message"
+  },
+  "locations": {
+    "title": "Branches & Service Centers",
+    "mapTitle": "Map {{name}}"
+  },
+  "partnersPage": {
+    "title": "Partners / Agencies"
+  },
+  "qualityPage": {
+    "title": "Quality & Safety Policy",
+    "intro": "Our commitment to quality and safety standards in all our products and services."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "{{company}} respects your privacy. This page explains how we collect and use information when you visit our site.",
+    "infoWeCollect": "Information We Collect",
+    "infoWeCollectText": "We may collect name, phone number, email, and messages you send via the contact form, only to respond to your inquiries.",
+    "useOfInfo": "Use of Information",
+    "useOfInfoText": "We use this information to communicate with you and respond to your requests. We will not share it with third parties for marketing purposes without your consent.",
+    "updates": "Updates",
+    "updatesText": "We may update this privacy policy from time to time. Any changes will be posted on this page.",
+    "inquiries": "For inquiries:"
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "intro": "Your use of {{company}} website means you agree to these terms.",
+    "useOfSite": "Use of Site",
+    "useOfSiteText": "Content on this site is for informational purposes only. Use or republication of content without prior permission is not allowed.",
+    "productsServices": "Products and Services",
+    "productsServicesText": "Prices and details are subject to change. Please confirm details when contracting or ordering.",
+    "externalLinks": "External Links",
+    "externalLinksText": "The site may contain links to other websites. We are not responsible for the content or practices of those sites.",
+    "inquiries": "For inquiries:"
+  }
+}

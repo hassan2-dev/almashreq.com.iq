@@ -1,28 +1,31 @@
+import { useTranslation } from 'react-i18next';
 import { site } from '../config/site';
 
 export function Terms() {
+  const { t } = useTranslation();
+
   return (
     <div className="py-12 md:py-16">
       <div className="container-narrow max-w-3xl">
-        <h1 className="section-title mb-6">الشروط والأحكام</h1>
+        <h1 className="section-title mb-6">{t('terms.title')}</h1>
         <div className="prose prose-neutral text-neutral-600 space-y-4">
           <p>
-            استخدامك لموقع {site.companyName} يعني موافقتك على هذه الشروط.
+            {t('terms.intro', { company: t('site.companyName') })}
           </p>
-          <h2 className="font-bold text-neutral-800 text-lg">استخدام الموقع</h2>
+          <h2 className="font-bold text-neutral-800 text-lg">{t('terms.useOfSite')}</h2>
           <p>
-            المحتوى الموجود على هذا الموقع لأغراض إعلامية فقط. لا يُسمح باستخدام المحتوى أو إعادة نشره دون إذن مسبق.
+            {t('terms.useOfSiteText')}
           </p>
-          <h2 className="font-bold text-neutral-800 text-lg">المنتجات والخدمات</h2>
+          <h2 className="font-bold text-neutral-800 text-lg">{t('terms.productsServices')}</h2>
           <p>
-            الأسعار والتفاصيل قابلة للتغيير. يرجى التأكد من التفاصيل عند التعاقد أو الطلب.
+            {t('terms.productsServicesText')}
           </p>
-          <h2 className="font-bold text-neutral-800 text-lg">روابط خارجية</h2>
+          <h2 className="font-bold text-neutral-800 text-lg">{t('terms.externalLinks')}</h2>
           <p>
-            قد يحتوي الموقع على روابط لمواقع أخرى. نحن غير مسؤولين عن محتوى أو ممارسات تلك المواقع.
+            {t('terms.externalLinksText')}
           </p>
           <p className="pt-4">
-            للاستفسارات: <a href={`mailto:${site.email}`} className="text-primary hover:underline">{site.email}</a>
+            {t('terms.inquiries')} <a href={`mailto:${site.email}`} className="text-primary hover:underline">{site.email}</a>
           </p>
         </div>
       </div>

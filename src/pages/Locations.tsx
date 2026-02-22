@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { locations } from '../config/content';
 import { site } from '../config/site';
 
@@ -7,12 +8,14 @@ function whatsappUrl(wa: string) {
 }
 
 export function Locations() {
+  const { t } = useTranslation();
+
   return (
     <div className="py-12 md:py-16">
       <div className="container-narrow">
-        <h1 className="section-title mb-2">الفروع ومراكز الصيانة</h1>
+        <h1 className="section-title mb-2">{t('locations.title')}</h1>
         <p className="text-neutral-600 mb-10">
-          عناوين المقر الرئيسي والفروع ومراكز الصيانة — اتصل أو استخدم الاتجاهات.
+          {t('content.locationsIntro')}
         </p>
 
         <div className="space-y-6">
@@ -23,9 +26,9 @@ export function Locations() {
             >
               <div className="flex flex-wrap justify-between gap-4">
                 <div>
-                  <span className="text-xs font-semibold text-primary">{loc.type}</span>
-                  <h2 className="font-bold text-lg text-neutral-800 mt-1">{loc.name}</h2>
-                  <p className="text-neutral-600 mt-2">{loc.address}</p>
+                  <span className="text-xs font-semibold text-primary">{t(`content.locations.${loc.id}.type`)}</span>
+                  <h2 className="font-bold text-lg text-neutral-800 mt-1">{t(`content.locations.${loc.id}.name`)}</h2>
+                  <p className="text-neutral-600 mt-2">{t(`content.locations.${loc.id}.address`)}</p>
                   <ul className="mt-2 space-y-1">
                     {loc.phones.map((ph) => (
                       <li key={ph}>
@@ -43,7 +46,7 @@ export function Locations() {
                     rel="noopener noreferrer"
                     className="btn-primary"
                   >
-                    واتساب
+                    {t('buttons.whatsapp')}
                   </a>
                   <a
                     href={loc.mapLink}
@@ -51,14 +54,14 @@ export function Locations() {
                     rel="noopener noreferrer"
                     className="btn-outline"
                   >
-                    الاتجاهات
+                    {t('buttons.directions')}
                   </a>
                 </div>
               </div>
               {loc.lat && loc.lng && (
                 <div className="mt-4 rounded-lg overflow-hidden bg-neutral-100 h-48">
                   <iframe
-                    title={`خريطة ${loc.name}`}
+                    title={t('locations.mapTitle', { name: t(`content.locations.${loc.id}.name`) })}
                     src={`https://www.google.com/maps?q=${loc.lat},${loc.lng}&z=15&output=embed`}
                     className="w-full h-full border-0"
                     allowFullScreen
