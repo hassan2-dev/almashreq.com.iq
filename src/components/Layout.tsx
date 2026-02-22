@@ -150,18 +150,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
 
-        {/* Mobile menu overlay */}
+        {/* Mobile menu overlay — click outside to close */}
         <div
+          role="button"
+          tabIndex={-1}
           className={`fixed inset-0 top-16 z-40 bg-black/50 transition-opacity lg:hidden ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
           aria-hidden={!menuOpen}
           onClick={() => setMenuOpen(false)}
+          onKeyDown={(e) => e.key === 'Escape' && setMenuOpen(false)}
         />
         <div
-          className={`fixed top-16 bottom-0 left-0 rtl:left-auto rtl:right-0 z-50 w-full max-w-sm bg-white border-s   transition-transform duration-300 ease-out lg:hidden ${
+          className={`fixed top-16 bottom-0 left-0 right-0 z-50 w-full bg-white border-s border-neutral-200 shadow-xl transition-transform duration-300 ease-out lg:hidden ${
             menuOpen ? 'translate-x-0' : '-translate-x-full rtl:translate-x-full'
           }`}
+          onClick={(e) => e.stopPropagation()}
         >
-          <nav className="flex flex-col gap-2 p-4 overflow-y-auto bg-white min-h-full w-full">
+          <nav className="flex flex-col gap-2 p-4 overflow-y-auto bg-neutral-50 min-h-full w-full">
             <NavLinks
               location={location}
               t={t}
