@@ -5,13 +5,24 @@ import { aboutText, vision, mission, servicesList, locations, partners } from '.
 export function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-primary to-primary-dark text-white">
-        <div className="container-narrow relative z-10 py-16 md:py-24 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
+      {/* Hero - video background */}
+      <section className="relative min-h-[70vh] overflow-hidden bg-neutral-900">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+          aria-hidden
+        >
+          <source src="/video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50" aria-hidden />
+        <div className="container-narrow relative z-10 flex min-h-[70vh] flex-col items-center justify-center py-16 md:py-24 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 text-white drop-shadow-lg">
             {site.companyNameShort}
           </h1>
-          <p className="text-lg md:text-xl opacity-95 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/95 mb-8 max-w-2xl mx-auto drop-shadow-md">
             {site.tagline}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
