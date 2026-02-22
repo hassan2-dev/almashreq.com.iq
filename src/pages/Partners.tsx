@@ -15,11 +15,16 @@ export function Partners() {
               key={p.name}
               className="group rounded-2xl border border-neutral-200 bg-white p-8 text-center shadow-md transition-all duration-300 hover:border-primary/20 hover:shadow-xl"
             >
-              {p.logo && (
-                <div className="mb-6 flex h-20 w-full overflow-hidden rounded-lg bg-neutral-50 p-6 transition-colors duration-300 group-hover:bg-primary/5">
-                  <img src={p.logo} alt={p.name} className=" h-full w-full object-cover object-center" />
-                </div>
-              )}
+             {p.logo && (
+  <div className="mb-6 flex h-24 w-full items-center justify-center rounded-lg bg-neutral-50 p-4">
+    <img
+      src={p.logo}
+      alt={p.name}
+      className="max-h-full max-w-full object-contain"
+      loading="lazy"
+    />
+  </div>
+)}
               <h2 className="text-2xl font-bold text-neutral-800">{p.name}</h2>
               <p className="mt-2 text-neutral-600">{p.description}</p>
               {p.tags.length > 0 && (
