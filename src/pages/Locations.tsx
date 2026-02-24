@@ -32,7 +32,7 @@ export function Locations() {
                   <ul className="mt-2 space-y-1">
                     {loc.phones.map((ph) => (
                       <li key={ph}>
-                        <a href={`tel:${ph.replace(/\s/g, '')}`} className="text-primary hover:underline">
+                        <a href={`tel:${ph.replace(/\s/g, '')}`} dir="ltr" className="text-primary hover:underline">
                           {ph}
                         </a>
                       </li>

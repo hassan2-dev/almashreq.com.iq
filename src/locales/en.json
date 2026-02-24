@@ -9,8 +9,8 @@
     "contact": "Contact Us"
   },
   "site": {
-    "companyName": "Al-Mashreq AL-mutahida General Trading Company LLC",
-    "companyNameShort": "Al-Mashreq AL-mutahida",
+    "companyName": "Al-Mashreq AL-mutahaduh General Trading Company LLC",
+    "companyNameShort": "Al-Mashreq AL-mutahaduh",
     "tagline": "Oils • Filters • Batteries • Service Centers",
     "founded": "Est. {{year}}"
   },
@@ -50,7 +50,7 @@
     "ctaIntro": "For inquiries or a quote, call us or message us on WhatsApp."
   },
   "content": {
-    "aboutText": "Al-Mashreq United General Trading Company LLC was established in 1992, with over three decades of experience in distributing oils, filters, batteries, and service center operations. We are committed to quality and safety standards and work with international agencies and brands. We offer wholesale and retail solutions and service centers in multiple locations.",
+    "aboutText": "Al-Mashreq mutahaduh General Trading Company LLC was established in 1992, with over three decades of experience in distributing oils, filters, batteries, and service center operations. We are committed to quality and safety standards and work with international agencies and brands. We offer wholesale and retail solutions and service centers in multiple locations.",
     "vision": "To be the first choice for customers in oils, filters, batteries, and maintenance services in Iraq and the region.",
     "mission": "To provide high-quality products and services with safety and trust, and to build long-term partnerships with customers and partners.",
     "timeline": {
@@ -96,12 +96,12 @@
     "locationsIntro": "Addresses of headquarters, branches, and service centers — call or use directions.",
     "locations": {
       "basra": {
-        "name": "Al-Mashreq United — Basra Branch",
+        "name": "Al-Mashreq AL-mutahaduh — Basra Branch",
         "type": "Headquarters",
         "address": "Basra"
       },
       "zubayr": {
-        "name": "Al-Mashreq United — Zubayr Branch",
+        "name": "Al-Mashreq AL-mutahaduh — Zubayr Branch",
         "type": "Branch",
         "address": "Industrial Area, Zubayr, Basra"
       }
@@ -115,7 +115,7 @@
       "Rudson": { "description": "Exclusive agent in Iraq" },
       "Gat": { "description": "Distributor" },
       "Triax": { "description": "Distributor" },
-      "almashreq factory": { "description": "Al-Mashreq United General Trading Company LLC Factory" }
+      "almashreq factory": { "description": "Al-Mashreq AL-mutahaduh General Trading Company LLC Factory" }
     },
     "partnerTags": {
       "زيوت": "Oils",
