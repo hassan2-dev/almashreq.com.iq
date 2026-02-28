@@ -1,15 +1,50 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 import { site } from '../config/site';
 import { SocialIcons } from '../components/SocialIcons';
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
 
 export function Contact() {
   const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      setError(t('contact.sendError'));
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+    const form = e.currentTarget;
+
+    try {
+      const res = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY);
+      if (res.status !== 200) {
+        setError(t('contact.sendError'));
+        return;
+      }
+      setSubmitted(true);
+      form.reset();
+    } catch (err: unknown) {
+      if (err && typeof err === 'object' && 'status' in err) {
+        const status = (err as { status?: number }).status;
+        if (status === 400) {
+          setError(t('contact.sendError400'));
+          return;
+        }
+      }
+      setError(t('contact.sendError'));
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -67,7 +102,21 @@ export function Contact() {
                     name="name"
                     type="text"
                     required
-                    className="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary"
+                    disabled={loading}
+                    className="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary disabled:opacity-60"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">
+                    {t('contact.email')}
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    disabled={loading}
+                    className="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary disabled:opacity-60"
                   />
                 </div>
                 <div>
@@ -79,7 +128,8 @@ export function Contact() {
                     name="phone"
                     type="tel"
                     required
-                    className="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary"
+                    disabled={loading}
+                    className="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary disabled:opacity-60"
                   />
                 </div>
                 <div>
@@ -91,11 +141,19 @@ export function Contact() {
                     name="message"
                     rows={4}
                     required
-                    className="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary"
+                    disabled={loading}
+                    className="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary disabled:opacity-60"
                   />
                 </div>
-                <button type="submit" className="btn-primary w-full">
-                  {t('buttons.send')}
+                {error && (
+                  <p className="text-red-600 text-sm">{error}</p>
+                )}
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="btn-primary w-full disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {loading ? t('contact.sending') : t('buttons.send')}
                 </button>
               </form>
             )}

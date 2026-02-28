@@ -139,6 +139,9 @@
     "phone": "هاتف",
     "formTitle": "نموذج تواصل",
     "successMessage": "تم إرسال رسالتك. سنتواصل معك قريباً.",
+    "sending": "جاري الإرسال...",
+    "sendError": "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى أو الاتصال بنا.",
+    "sendError400": "إعداد خاطئ (400). تحقق من EmailJS: Service ID و Template ID و Public Key، وأن القالب يستخدم {{name}} و {{email}} و {{phone}} و {{message}}.",
     "name": "الاسم",
     "message": "الرسالة"
   },
